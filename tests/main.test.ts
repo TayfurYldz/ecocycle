@@ -1,9 +1,10 @@
-import { app } from '../src/index';
+import { jest } from '@jest/globals';
 import request from 'supertest';
+import app from '../src/main';
 
-describe('GET /api/recycling-centers', () => {
-  it('should return a list of nearby recycling centers', async () => {
-    const response = await request(app).get('/api/recycling-centers?location=New+York');
+describe('GET /api/challenges', () => {
+  it('should return a list of challenges', async () => {
+    const response = await request(app).get('/api/challenges');
     expect(response.status).toBe(200);
     expect(response.body).toBeInstanceOf(Array);
   });
