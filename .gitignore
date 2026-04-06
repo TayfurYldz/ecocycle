@@ -1,5 +1,3 @@
 node_modules/
-src/main.ts
-src/models/
-src/utils/
-README.md
+src/*.ts
+*.env
